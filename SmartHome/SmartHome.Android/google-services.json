@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "997327002541",
+    "firebase_url": "https://smarthome-ab3cb.firebaseio.com",
+    "project_id": "smarthome-ab3cb",
+    "storage_bucket": "smarthome-ab3cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997327002541:android:370f649087af253b",
+        "android_client_info": {
+          "package_name": "com.Homeotics.SmartHome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997327002541-8a7ch3n4eikhprsemr0u29suq3j90a9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Homeotics.SmartHome",
+            "certificate_hash": "6670f2f0277e103c61e1c21e20dd4cd09aa94a18"
+          }
+        },
+        {
+          "client_id": "997327002541-8rrfcmk5nc8jumbkhafpi2na1to93qpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdusGOUBQpXKNznq7A4P766i6z_lq5apQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997327002541-8rrfcmk5nc8jumbkhafpi2na1to93qpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
