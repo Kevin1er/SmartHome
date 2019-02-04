@@ -1,23 +1,59 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:SmartHome.Converters"
              x:Class="SmartHome.Views.ConnectionPage"
              BackgroundColor="#3a4055"
-             Title="Connection"
-             >
+             Title="Connection">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InvertBooleanConverter x:Key="invertBooleanConverter" />
+
+            <Style TargetType="Label" x:Key="errorDescriptionStyle">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-      <StackLayout Margin="20">
-          <Entry Placeholder="Username ..." 
+      <StackLayout 
+          Orientation="Vertical"
+          Padding="25"
+          VerticalOptions="Center">
+            <Label
+            Style="{StaticResource errorDescriptionStyle}"
+            Text="{Binding Email.ValidationDescriptions}"
+            IsVisible="{Binding Email.IsValid, Converter={StaticResource invertBooleanConverter}}" />
+            <Entry Placeholder="Email ..."
+                 Text="{Binding Email.Value}"
                  TextColor="White"
-                 PlaceholderColor="LightGray"/>
+                 PlaceholderColor="LightGray">
+                <Entry.Triggers>
+                    <DataTrigger 
+                        TargetType="Entry"
+                        Binding="{Binding Email.IsValid}"
+                        Value="False">
+                        <Setter Property="TextColor" Value="Red" />
+                    </DataTrigger>
+                </Entry.Triggers>
+          </Entry>
+          <Label
+              Style="{StaticResource errorDescriptionStyle}"
+              Text="{Binding Password.ValidationDescriptions}"
+              IsVisible="{Binding Password.IsValid, Converter={StaticResource invertBooleanConverter}}" />
           <Entry Placeholder="Password ..."
                  TextColor="White"
                  PlaceholderColor="LightGray"
-                 IsPassword="True"/>
-          <Button Text="OK"
+                 IsPassword="True"
+                 Text="{Binding Password.Value}"/>
+          <Button Text="Login"
                   TextColor="White"
                   BackgroundColor="Black"
-                  Clicked="OnButtonClicked"/>
-      </StackLayout>
+                  Command="{Binding LoginCmd}"/>
+          <ActivityIndicator
+              IsVisible="{Binding IsBusy}"
+              IsRunning="{Binding IsBusy}"/>
+        </StackLayout>
   </ContentPage.Content>
 </ContentPage>

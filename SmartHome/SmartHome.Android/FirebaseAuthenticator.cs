@@ -18,8 +18,7 @@ namespace SmartHome.Droid
     {
         public async Task<string> LoginWithEmailPassword(string email, string password)
         {
-            var user = await FirebaseAuth.Instance.
-                            SignInWithEmailAndPasswordAsync(email, password);
+            var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
             var token = await user.User.GetIdTokenAsync(false);
             return token.Token;
         }

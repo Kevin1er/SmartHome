@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Android", "SmartH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.iOS", "SmartHome\SmartHome.iOS\SmartHome.iOS.csproj", "{F3C9FE28-FBF4-4F4F-8E91-A35A6ABAECB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome", "SmartHome\SmartHome\SmartHome.csproj", "{66175785-94E4-4A9C-9D0D-7F58DAB6B525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome", "SmartHome\SmartHome\SmartHome.csproj", "{66175785-94E4-4A9C-9D0D-7F58DAB6B525}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
